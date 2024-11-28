@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assets3D</title>
+    <link rel="stylesheet" href="Login.css" />
+  </head>
+  <body>
+    <header>
+      <img src="3D (1).png" alt="Logo 3DGraphics store" />
+    </header>
+    <section id="logContainer">
+      <div class="divMargin">
+        <p>Login</p>
+        <form>
+          <label id="labelUserName">Name</label><br>
+          <input type="text" id="userName" placeholder="Name"></input>
+          <br>
+          <label id="labelEmail">E-mail</label><br>
+          <input type="email" id="email" placeholder="E-mail address"></input>
+          <br>
+          <label id="labelPassword">Password</label><br>
+          <input type="password" id="password" placeholder="Password"></input>
+          <br>
+          <input type="button" id="loginButton" value="Login" onclick="login()"></input>
+        </form>
+        <div id="msgError">Some of the information is incorrect!</div>
+      </div>
+      <div class="redirectRegister">
+        <p>Create account</p>
+        <a href="https://p4gzfq.csb.app/Register/Register.html">Register</a>
+      </div>
+    </section>
+    <script src="Login.js"></script>
+  </body>
+</html>

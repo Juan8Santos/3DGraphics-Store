@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#logo {
+  position: absolute;
+  left: 46px;
+  top: 2px;
+  height: 45px;
+  width: 120px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("cozinha3D.png");
+  width: 100%;
+  height: 480px;
+  position: absolute;
+}
+
+nav {
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+  height: 50px;
+  gap: 20px;
+  margin-right: 60px;
+}
+
+.nav-item {
+  margin-top: 13px;
+}
+
+.nav-item-register {
+  margin-top: 13px;
+}
+
+.nav-item-login {
+  margin-top: 13px;
+}
+
+.nav-item-cart {
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+#registerAssets input {
+  background-color: white;
+  border: 0px white solid;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#registerAssets input:hover {
+  color: rgb(141, 141, 141);
+}
+
+.nav-item-manege {
+  margin-top: 15px;
+  display: none;
+}
+
+.logo {
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(141, 141, 141);
+}
+
+.login {
+  margin-left: 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 7px;
+  padding-left: 26px;
+  padding-right: 26px;
+  transition: 0.3s;
+}
+
+.navbar .nav-item-login .login:hover {
+  color: white;
+  background-color: black;
+}
+
+.Register {
+  margin-left: -10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+.navbar .nav-item-register .Register:hover {
+  color: black;
+  background-color: white;
+  border: 1px black solid;
+}
+
+.nav-item-account {
+  margin-top: 13px;
+}
+
+.account {
+  font-size: 14px;
+  margin-top: 2px;
+  border-left: 1px black solid;
+  padding-left: 20px;
+}
+
+#logoutButton {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: -6px;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+#logoutButton:hover {
+  color: black;
+  background-color: white;
+  border: 1px black solid;
+}
+
+header .contentHeader {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+  gap: 80px;
+  width: 100%;
+}
+
+#inputPicture {
+  display: none;
+}
+
+#labelPicture {
+  height: 600px;
+  width: 500px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+#labelPicture:hover {
+  height: 620px;
+  width: 520px;
+  box-shadow: 0px 0px 20px 0px rgba(168, 168, 168, 1);
+}
+
+#labelPicture i {
+  color: #b4b4b4;
+  font-size: 58px;
+}
+
+.pictureImg {
+  height: 600px;
+  width: 500px;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.pictureImg:hover {
+  height: 620px;
+  width: 520px;
+  box-shadow: 0px 0px 20px 0px rgba(168, 168, 168, 1);
+}
+
+.sectionName {
+  margin-top: 100px;
+}
+
+.sectionInformations {
+  margin-top: 100px;
+}
+
+input[type="text"] {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  outline: 0;
+}
+
+#labelProductName {
+  font-size: 18px;
+}
+#labelValue {
+  font-size: 18px;
+}
+#labelDescription {
+  font-size: 18px;
+}
+
+.sectionInformations p {
+  font-size: 18px;
+}
+
+.divRadio {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 60px;
+  width: 200px;
+  margin-bottom: 34px;
+  margin-top: 25px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  gap: 18px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked {
+  background-image: radial-gradient(white 35%, black 40%);
+  border-color: #000000;
+  margin-top: 15px;
+}
+
+#labelRealistic {
+  margin-left: 7px;
+}
+
+#labelCartoon {
+  margin-left: 20px;
+}
+
+#buttonRegisterAssets {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border: 1px black solid;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#buttonRegisterAssets:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+#input3dFile {
+  display: none;
+}
+
+#label3dFile {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 1px black solid;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#label3dFile:hover {
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+}

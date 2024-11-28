@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <img src="3D.png" alt="Logo 3D Graphics" id="logo" />
+    <nav class="navbar">
+    <ul>
+        <li class="nav-item">
+        <a class="nav-link" href="https://p4gzfq.csb.app/">Home</a>
+        </li>
+        <li class="nav-item-manege">
+        <a class="nav-link" href="https://p4gzfq.csb.app/ManegeProducts/ManegeProducts.html">Manage Products</a>
+        </li>
+        <li class="nav-item" id="registerAssets">
+            <input type="button" class="nav-link" value="Register Assets"></input>
+        </li>
+        <li class="nav-item-login">
+        <a class="login" href="https://p4gzfq.csb.app/Login/Login.html">Login</a>
+        </li>
+        <li class="nav-item-register">
+        <a class="Register" href="https://p4gzfq.csb.app/Register/Register.html"
+            >Register</a
+        >
+        </li>
+        <li class="nav-item-account">
+        <p class="account"></p>
+        </li>
+        <li class="nav-item">
+        <button onclick="logout()" id="logoutButton">Logout</button>
+        </li>
+    </ul>
+    </nav>
+    <header>
+            <div class="cartStyle">
+                <div class="divNumber1"><div class="classNumber1">1</div></div>
+                <div class="cartStyleContent"> Cart</div>
+            </div>
+            <div class="paymentStyle">
+                <div class="divPayment2"><div class="classPayment2">2</div></div>
+                <div class="paymentStyleContent"> Payment</div>
+            </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>amount</th>
+                    <th>Unit value</th>
+                    <th>Final value</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <section id="cartSummary">
+            <div class="cartDeliveryTime">
+                <form>
+                    <label class="labelDeliveryTime">Delivery Time</label><br>
+                    <input type="number" class="inputDeliveryTime" placeholder="00000-000"/>
+                    <input type="button" class="buttonDeliveryTime" value="Calculate"/>   
+                </form>
+                <p>Delivery Policy</p>
+            </div>
+            <div class="cartCoupon">
+                <form>
+                    <label class="labelCoupon">Coupon</label><br>
+                    <input type="text" class="inputCoupon"/>
+                    <input type="button" class="buttonCoupon" value="Apply"/>
+                </form>
+            </div>
+            <div class="cartSummaryContent">
+                <p class="cartSummaryTitle">Summary</p>
+                <div class="divSummaryContent">
+                    <div class="divSummaryInformations">
+                        <p>Value of Products</p>
+                        <p>Delivery</p>
+                        <p>Total Purchase</p>
+                    </div>
+                    <div class="divSummaryPrice">
+                        <p class="cartTotalValue"></p>
+                        <p class="cartCalculate">To Be Calculated</p>
+                        <p class="cartTotalPurchase"></p>
+                    </div>
+                </div>
+                <input type="button" onclick="Buy()" id="buttonContinueToPayment" value="Continue"/>
+            </div>
+        </section>
+    </main>
+    <section class="sectionEmptyCart">
+        <img src="png-transparent-empty-cart-illustration (1).png" alt="Empty Cart">
+        <h1>Your Cart is Empty</h1>
+        <p>Browse the store categories or search for your product.</p>
+        <a href="https://p4gzfq.csb.app">Return to Shop <i class="fa-solid fa-cart-shopping"></i></i></a>
+    </section>
+
+    <script src="Cart.js"></script>
+</body>
+</html>

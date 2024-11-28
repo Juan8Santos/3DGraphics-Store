@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assets3D</title>
+    <link rel="stylesheet" href="Register.css" />
+  </head>
+  <body>
+    <header>
+      <img src="3D (1).png" alt="Logo 3DGraphics store" />
+    </header>
+    <section id="logContainer">
+      <div class="divMargin">
+        <p>Register</p>
+        <form>
+          <div class="userName">
+            <div class="name">
+                <label id="labelName">Name</label><br>
+                <input type="text" id="name" placeholder="Name"></input>
+            </div>
+            <div class="lastName">
+                <label id="labelLastName">Last Name</label><br>
+                <input type="text" id="lastName" placeholder="Last Name"></input>
+            </div>
+          </div>
+          <label id="labelEmail">E-mail</label><br>
+          <input type="email" id="email" placeholder="E-mail address"></input>
+          <br>
+          <label id="labelPassword">Password</label><br>
+          <input type="password" id="password" placeholder="Password"></input>
+          <br>
+          <label id="labelConfirmPassword">Confirm Password</label><br>
+          <input type="password" id="confirmPassword" placeholder="Confirm Password"></input>
+          <br>
+          <input type="button" id="registerButton" value="Register" onclick="Register()"></input>
+        </form>
+          <div id="msgError"></div>
+      </div>
+      <div class="redirectLogin">
+        <p>Login account</p>
+        <a href="https://p4gzfq.csb.app/Login/Login.html">Login</a>
+      </div>
+    </section>
+    <script src="Register.js"></script>
+  </body>
+</html>

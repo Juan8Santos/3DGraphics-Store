@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManegeProducts</title>
+    <link rel="stylesheet" href="ManegeProducts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <img src="3D.png" alt="Logo 3D Graphics" id="logo" />
+    <nav class="navbar">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="https://p4gzfq.csb.app/">Home</a>
+        </li>
+        <li class="nav-item" id="registerAssets">
+          <input type="button" class="nav-link" value="Register Assets"></input>
+        </li>
+        <li class="nav-item-login">
+          <a class="login" href="https://p4gzfq.csb.app/Login/Login.html"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item-register">
+          <a
+            class="Register"
+            href="https://p4gzfq.csb.app/Register/Register.html"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item-cart">
+          <a class="cart" href="https://p4gzfq.csb.app/Cart/Cart.html">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item-account">
+          <p class="account"></p>
+        </li>
+        <li class="nav-item">
+          <button onclick="logout()" id="logoutButton">Logout</button>
+        </li>
+      </ul>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Unit value</th>
+                    <th class="deleteProducts">Delete Product</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <section>
+            <input type="button" class="clearAllButton" value="Clear All" onclick="clearAll()"/>
+            <input type="button" class="ReturnToTopButton" value="Return to Top" onclick="returnToTop()"/>
+        </section>
+      </main>
+
+        <section class="sectionEmptyCart">
+          <img src="image.png" alt="Empty Cart">
+          <h1>The Store is Empty</h1>
+          <p>"Oops! Your inventory is empty. Add new 3D models and inspire creativity!"</p>
+          <a href="https://p4gzfq.csb.app/registerAssets/registerAssets.html">Register New Products <i class="fa-solid fa-clipboard"></i></a>
+      </section>
+    <script src="ManegeProducts.js"></script>
+  </body>
+</html>

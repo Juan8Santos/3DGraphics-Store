@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViewAllProducts</title>
+    <link rel="stylesheet" href="ViewAllProducts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <body>
+      <img src="3D.png" alt="Logo 3D Graphics" id="logo" />
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="https://p4gzfq.csb.app/">Home</a>
+          </li>
+          <li class="nav-item" id="registerAssets">
+            <input type="button" class="nav-link" value="Register Assets"></input>
+          </li>
+          <li class="nav-item-manege">
+            <a class="nav-link" href="https://p4gzfq.csb.app/ManegeProducts/ManegeProducts.html">Manage Products</a>
+          </li>
+          <li class="nav-item-login">
+            <a class="login" href="https://p4gzfq.csb.app/Login/Login.html"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item-register">
+            <a
+              class="Register"
+              href="https://p4gzfq.csb.app/Register/Register.html"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item-cart">
+            <a class="cart" href="https://p4gzfq.csb.app/Cart/Cart.html">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li class="nav-item-account">
+            <p class="account"></p>
+          </li>
+          <li class="nav-item">
+            <button onclick="logout()" id="logoutButton">Logout</button>
+          </li>
+        </ul>
+      </nav>
+      <section id="sectionProducts">
+        <div class="contentProducts">
+          <div class="TextcontentProducts">
+            <h5>3D Graphics</h5>
+            <h1>All Assets</h1>
+            <p>Here you will find all the store's assets.</p>
+          </div>
+        </div>
+        <button class="buttonLeftArrow control"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="buttonRightArrow control"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="products">
+        </div>
+      </section>
+      <section id="sectionProducts">
+        <div class="contentProducts">
+          <div class="TextcontentProducts">
+            <h5>3D Graphics</h5>
+            <h1>Free Assets</h1>
+            <p>Here you will find all the free assets in the store.</p>
+          </div>
+        </div>
+        <button class="buttonLeftArrowFree controlFree"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="buttonRightArrowFree controlFree"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="freeProducts">
+        </div>
+      </section>
+      <section id="sectionProducts">
+        <div class="contentProducts">
+          <div class="TextcontentProducts">
+            <h5>3D Graphics</h5>
+            <h1>Realistc Assets</h1>
+            <p>Here you will find all the realistically styled assets from the store.</p>
+          </div>
+        </div>
+         <button class="buttonLeftArrowRealistic controlrealistic"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="buttonRightArrowRealistic controlrealistic"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="realisticProducts">
+        </div>
+      </section>
+      <section id="sectionProducts">
+        <div class="contentProducts">
+          <div class="TextcontentProducts">
+            <h5>3D Graphics</h5>
+            <h1>Cartoon Assets</h1>
+            <p>Here you will find all the cartoon-style assets from the store.</p>
+          </div>
+        </div>
+        <div class="cartoonProducts">
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="leftSideFooter">
+          <p>@ 2024 3DGraphics All rights reserved</p>
+        </div>
+        <div class="rightSideFooter">
+          <p>Privacy Politics - Terms of Service</p>
+        </div>
+      </footer>
+    <script src="ViewAllProducts.js"></script>
+  </body>
+</html>

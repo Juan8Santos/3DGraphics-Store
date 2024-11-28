@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registerAssets</title>
+    <link rel="stylesheet" href="registerAssets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <img src="3D.png" alt="Logo 3D Graphics" id="logo" />
+    <nav class="navbar">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="https://p4gzfq.csb.app/">Home</a>
+        </li>
+        <li class="nav-item-manege">
+          <a class="nav-link" href="https://p4gzfq.csb.app/ManegeProducts/ManegeProducts.html">Manage Products</a>
+        </li>
+        <li class="nav-item-cart">
+          <a class="cart" href="https://p4gzfq.csb.app/Cart/Cart.html">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item-login">
+          <a class="login" href="https://p4gzfq.csb.app/Login/Login.html"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item-register">
+          <a
+            class="Register"
+            href="https://p4gzfq.csb.app/Register/Register.html"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item-account">
+          <p class="account"></p>
+        </li>
+        <li class="nav-item">
+          <button onclick="logout()" id="logoutButton">Logout</button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="sectionName">
+        <form>
+        <label id="labelProductName"><strong>Product Name</strong></label><br>
+        <input type="text" id="inputProductName" placeholder="Product Name"></input><br><br>
+        <label id="labelValue"><strong>Value</strong></label><br>
+        <input type="number" id="inputValue" placeholder="$ 55"></input><br><br>
+        <label id="labelDescription"><strong>Description</strong></label><br>
+        <input type="text" id="inputDescription" placeholder="Description"></input>
+        </form>
+      </section>
+      <section class="sectionPicture">
+        <label id="labelPicture" for="inputPicture"><span class="spanInput"><i class="fa-solid fa-image"></i></span></label>
+        <input type="file" id="inputPicture" accept="image/*"></input>
+      </section>
+      <section class="sectionInformations">
+        <p><strong>Art Style</strong></p>
+        <form>
+          <div class="divRadio">
+            <label id="labelRealistic">Realistic</label>
+            <input type="radio" name="Art Style" value="Realistic" checked id="inputRealistic"></input>
+            <label id="labelCartoon">Cartoon</label>
+            <input type="radio" name="Art Style" value="Cartoon" id="inputCartoon"></input><br>
+          </div>
+          <label id="label3dFile" for="input3dFile">File</label><br>
+          <input type="file" id="input3dFile"><br>
+          <input type="button" id="buttonRegisterAssets" onclick="registerAssets()" value="Register Asset"></input>
+        </form>
+        <br>
+        <div id="errorMsg"></div>
+      </section>
+    </main>
+    <script src="registerAssets.js"></script>
+  </body>
+</html>

@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#logo {
+  position: absolute;
+  left: 46px;
+  top: 2px;
+  height: 45px;
+  width: 120px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("cozinha3D.png");
+  width: 100%;
+  height: 480px;
+  position: absolute;
+}
+
+nav {
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+  height: 50px;
+  gap: 20px;
+  margin-right: 60px;
+}
+
+.nav-item {
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.nav-item-register {
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.nav-item-login {
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.nav-item-cart {
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+#registerAssets input {
+  background-color: white;
+  border: 0px white solid;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#registerAssets input:hover {
+  color: rgb(141, 141, 141);
+}
+
+.nav-item-manege {
+  margin-top: 13px;
+  display: none;
+  cursor: pointer;
+}
+
+.logo {
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(141, 141, 141);
+}
+
+.login {
+  margin-left: 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 7px;
+  padding-left: 26px;
+  padding-right: 26px;
+  transition: 0.3s;
+}
+
+.navbar .nav-item-login .login:hover {
+  color: white;
+  background-color: black;
+}
+
+.Register {
+  margin-left: -10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+.navbar .nav-item-register .Register:hover {
+  color: black;
+  background-color: white;
+  border: 1px black solid;
+}
+
+.nav-item-account {
+  margin-top: 13px;
+}
+
+.account {
+  font-size: 14px;
+  margin-top: 2px;
+  border-left: 1px black solid;
+  padding-left: 20px;
+}
+
+#logoutButton {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: -6px;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+#logoutButton:hover {
+  color: black;
+  background-color: white;
+  border: 1px black solid;
+}
+
+header .contentHeader {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+header h5 {
+  margin-top: 108px;
+  margin-left: 60px;
+  color: white;
+}
+
+header h1 {
+  margin-top: 30px;
+  margin-left: 60px;
+  color: white;
+  font-size: 40px;
+}
+
+header p {
+  color: white;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 50%;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  height: 50px;
+  margin-left: 60px;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.productsHeader {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 7px;
+  padding-left: 23px;
+  padding-right: 23px;
+  transition: 0.3s;
+}
+
+header .contentHeader ul .productsHeader:hover {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.534);
+}
+
+.nav-item .footerHeader {
+  margin-left: -10px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.534);
+  background-color: rgb(255, 255, 255);
+  font-size: 14px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+header .contentHeader ul .footerHeader:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+#sectionProducts {
+  margin-top: 530px;
+  margin-left: 60px;
+}
+.contentProducts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentProducts h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.buttonViewAll li {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  margin-right: 60px;
+  margin-top: 80px;
+}
+
+.buttonViewAll li a {
+  border: black 1px solid;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+.buttonViewAll li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.buttonLeftArrow {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 110px;
+  bottom: -310px;
+  transition: 0.3s;
+}
+
+.buttonLeftArrow:hover {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid black;
+  color: white;
+}
+
+.fa-arrow-left:before {
+  font-size: 18px;
+}
+
+.buttonRightArrow {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 60px;
+  bottom: -310px;
+  transition: 0.3s;
+}
+
+.buttonRightArrow:hover {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid black;
+  color: white;
+}
+
+.fa-arrow-right:before {
+  font-size: 18px;
+}
+
+.products {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  margin-top: 40px;
+  height: 500px;
+  overflow-x: auto;
+}
+
+.products::-webkit-scrollbar {
+  display: none;
+}
+
+.exProduct1 {
+  max-height: 450px;
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.exProduct1 img {
+  height: 70%;
+  width: 100%;
+}
+
+.exProduct1 .contentProduct1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.exProduct1 li {
+  list-style-type: none;
+  margin-top: 23px;
+  text-align: center;
+}
+
+.exProduct1 li .buttonAddToCart {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border: black solid 1px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 36%;
+  padding-right: 35%;
+  transition: 0.3s;
+}
+
+.exProduct1 li .buttonAddToCart:hover {
+  background-color: black;
+  color: white;
+}
+
+#sectionLinks {
+  margin-top: 40px;
+  background-color: white;
+}
+
+#sectionLinks img {
+  height: 45px;
+  width: 120px;
+  margin-left: 46px;
+  margin-right: 60px;
+  margin-top: 50px;
+}
+
+.email h4 {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.email a {
+  font-size: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.number h4 {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.number p {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#Links {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 14px;
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 90px;
+}
+
+#Links li a {
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+#Links li a:hover {
+  color: rgb(141, 141, 141);
+}
+
+#divBorderFooter {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+footer .rightSideFooter {
+  margin-top: 30px;
+  margin-right: 60px;
+  font-size: 15px;
+}
+
+footer .leftSideFooter {
+  margin-top: 30px;
+  margin-left: 60px;
+  font-size: 15px;
+}

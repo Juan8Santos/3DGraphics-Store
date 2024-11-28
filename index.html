@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assets3D</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <img src="3D.png" alt="Logo 3D Graphics" id="logo" />
+    <nav class="navbar">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="https://p4gzfq.csb.app/">Home</a>
+        </li>
+        <li class="nav-item" id="registerAssets">
+          <input type="button" class="nav-link" value="Register Assets"></input>
+        </li>
+        <li class="nav-item-manege">
+          <a class="nav-link" href="https://p4gzfq.csb.app/ManegeProducts/ManegeProducts.html">Manage Products</a>
+        </li>
+        <li class="nav-item-login">
+          <a class="login" href="https://p4gzfq.csb.app/Login/Login.html"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item-register">
+          <a
+            class="Register"
+            href="https://p4gzfq.csb.app/Register/Register.html"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item-cart">
+          <a class="cart" href="https://p4gzfq.csb.app/Cart/Cart.html">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item-account">
+          <p class="account"></p>
+        </li>
+        <li class="nav-item">
+          <button onclick="logout()" id="logoutButton">Logout</button>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div class="contentHeader">
+        <h5>3D Graphics</h5>
+        <h1>Everything 3D you can find here</h1>
+        <p>
+          3D Graphics is a website selling high-quality 3D models, aimed at
+          designers, architects and developers. With an easy-to-use interface,
+          it offers a wide range of optimized templates and flexible licenses to
+          suit visualization, animation and design projects.
+        </p>
+        <ul>
+          <li class="nav-item">
+            <a class="productsHeader" href="#sectionProducts">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="footerHeader" href="#footer">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section id="sectionProducts">
+      <div class="contentProducts">
+        <div class="TextcontentProducts">
+          <h5>3D Graphics</h5>
+          <h1>Products</h1>
+          <p>Here you will find a vast library of templates.</p>
+        </div>
+        <div class="buttonViewAll">
+          <li>
+            <a class="ViewAll" href="https://p4gzfq.csb.app/ViewAllProducts/ViewAllProducts.html">View all</a>
+          </li>
+        </div>
+      </div>
+      <button class="buttonLeftArrow control"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="buttonRightArrow control"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="products">
+      </div>
+    </section>
+    <section id="sectionLinks">
+      <img src="3D.png" alt="logo 3D Graphics" />
+      <div class="email">
+        <h4>Email address</h4>
+        <a href="mailto:juan.santos@al.infnet.edu.br"
+          >juan.santos@al.infnet.edu.br</a
+        >
+      </div>
+      <div class="number">
+        <h4>Contact</h4>
+        <p>+55(21) 96734-6652</p>
+      </div>
+      <ul id="Links">
+        <li>
+          <a href="https://wa.me/5521967346652"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/Juan8Santos/Juan-projetos"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/juanpaixao/"
+            ><i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+      <div id="divBorderFooter"></div>
+    </section>
+    <footer id="footer">
+      <div class="leftSideFooter">
+        <p>@ 2024 3DGraphics All rights reserved</p>
+      </div>
+      <div class="rightSideFooter">
+        <p>Privacy Politics - Terms of Service</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
