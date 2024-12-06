@@ -47,32 +47,27 @@
       <section class="sectionName">
         <form>
         <label id="labelProductName"><strong>Product Name</strong></label><br>
-        <input type="text" id="inputProductName" placeholder="Product Name"></input><br><br>
+        <input type="text" id="inputProductName" placeholder="Product Name"></input><br>
         <label id="labelValue"><strong>Value</strong></label><br>
-        <input type="number" id="inputValue" placeholder="$ 55"></input><br><br>
+        <input type="number" id="inputValue" placeholder="$ 55"></input><br>
         <label id="labelDescription"><strong>Description</strong></label><br>
         <input type="text" id="inputDescription" placeholder="Description"></input>
+        <div class="divRadio">
+          <label id="labelRealistic">Realistic</label>
+          <input type="radio" name="Art Style" value="Realistic" checked id="inputRealistic"></input>
+          <label id="labelCartoon">Cartoon</label>
+          <input type="radio" name="Art Style" value="Cartoon" id="inputCartoon"></input>
+        </div>
+        <label id="label3dFile" for="input3dFile">File</label>
+        <input type="file" id="input3dFile">
+        <input type="button" id="buttonRegisterAssets" onclick="registerAssets()" value="Register Asset"></input>
+        <div id="errorMsg"></div>
         </form>
+
       </section>
       <section class="sectionPicture">
         <label id="labelPicture" for="inputPicture"><span class="spanInput"><i class="fa-solid fa-image"></i></span></label>
         <input type="file" id="inputPicture" accept="image/*"></input>
-      </section>
-      <section class="sectionInformations">
-        <p><strong>Art Style</strong></p>
-        <form>
-          <div class="divRadio">
-            <label id="labelRealistic">Realistic</label>
-            <input type="radio" name="Art Style" value="Realistic" checked id="inputRealistic"></input>
-            <label id="labelCartoon">Cartoon</label>
-            <input type="radio" name="Art Style" value="Cartoon" id="inputCartoon"></input><br>
-          </div>
-          <label id="label3dFile" for="input3dFile">File</label><br>
-          <input type="file" id="input3dFile"><br>
-          <input type="button" id="buttonRegisterAssets" onclick="registerAssets()" value="Register Asset"></input>
-        </form>
-        <br>
-        <div id="errorMsg"></div>
       </section>
     </main>
     <script src="registerAssets.js"></script>

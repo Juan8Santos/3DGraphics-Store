@@ -40,148 +40,101 @@ function logout() {
   window.location.href = "https://p4gzfq.csb.app";
 }
 
-function iniciateStore() {
-  let products = [];
-  products = JSON.parse(localStorage.getItem("productStorage"));
+function initiateStore() {
+  let products = JSON.parse(localStorage.getItem("productStorage")) || [];
 
-  products.map((item) => {
-    containerProducts.innerHTML +=
-      `
-    
-    <div class="exProduct1 current-item">
-    <img src="` +
-      item[4] +
-      `"/>
-    <div class="contentProduct1">
-      <div class="descriptionProduct1">
-        <h3>` +
-      item[0] +
-      `</h3>
-        <p class="description">` +
-      item[2] +
-      `</p>
-      <p class="artStyle">` +
-      item[3] +
-      `</p>
-      </div>
-      <div class="productValor1">
-        <h3><span>` +
-      item[1] +
-      `</span>$</h3>
-      </div>
-    </div>
-    <li>
-      <button class="buttonAddToCart" onclick="addToCartButton()">Add to Cart</button>
-    </li>
-  </div>
-    
-    `;
-
-    if (item[1] === "0") {
-      freeProducts.innerHTML +=
-        `
-      
-      <div class="exProduct1Free current-item-free">
-      <img src="` +
-        item[4] +
-        `"/>
-      <div class="contentProduct1">
-        <div class="descriptionProduct1">
-          <h3>` +
-        item[0] +
-        `</h3>
-          <p class="description">` +
-        item[2] +
-        `</p>
-        <p class="artStyle">` +
-        item[3] +
-        `</p>
-        </div>
-        <div class="productValor1">
-          <h3><span>` +
-        item[1] +
-        `</span>$</h3>
-        </div>
-      </div>
-      <li>
-        <button class="buttonAddToCart" onclick="addToCartButton()">Add to Cart</button>
-      </li>
-    </div>
-      
-      `;
-    }
-
-    if (item[3] === "Realistic") {
-      realisticProducts.innerHTML +=
-        `
-        
-        <div class="exProduct1Realistic current-item-realistic">
-        <img src="` +
-        item[4] +
-        `"/>
+  containerProducts.innerHTML = products
+    .map(
+      (item) => `
+      <div class="exProduct1 current-item">
+        <img src="${item[4]}" />
         <div class="contentProduct1">
           <div class="descriptionProduct1">
-            <h3>` +
-        item[0] +
-        `</h3>
-            <p class="description">` +
-        item[2] +
-        `</p>
-          <p class="artStyle">` +
-        item[3] +
-        `</p>
+            <h3>${item[0]}</h3>
+            <p class="description">${item[2]}</p>
+            <p class="artStyle">${item[3]}</p>
           </div>
           <div class="productValor1">
-            <h3><span>` +
-        item[1] +
-        `</span>$</h3>
+            <h3><span>${item[1]}</span>$</h3>
           </div>
         </div>
         <li>
-          <button class="buttonAddToCart" onclick="addToCartButton()">Add to Cart</button>
+          <button class="buttonAddToCart">Add to Cart</button>
         </li>
-      </div>
-        
-        `;
-    }
+      </div>`
+    )
+    .join("");
 
-    if (item[3] === "Cartoon") {
-      cartoonProducts.innerHTML +=
-        `
-          
-          <div class="exProduct1">
-          <img src="` +
-        item[4] +
-        `"/>
-          <div class="contentProduct1">
-            <div class="descriptionProduct1">
-              <h3>` +
-        item[0] +
-        `</h3>
-              <p class="description">` +
-        item[2] +
-        `</p>
-            <p class="artStyle">` +
-        item[3] +
-        `</p>
-            </div>
-            <div class="productValor1">
-              <h3><span>` +
-        item[1] +
-        `</span>$</h3>
-            </div>
+  freeProducts.innerHTML = products
+    .filter((item) => item[1] == "0")
+    .map(
+      (item) => `
+      <div class="exProduct1Free current-item-free">
+        <img src="${item[4]}" />
+        <div class="contentProduct1">
+          <div class="descriptionProduct1">
+            <h3>${item[0]}</h3>
+            <p class="description">${item[2]}</p>
+            <p class="artStyle">${item[3]}</p>
           </div>
-          <li>
-            <button class="buttonAddToCart" onclick="addToCartButton()">Add to Cart</button>
-          </li>
+          <div class="productValor1">
+            <h3><span>${item[1]}</span>$</h3>
+          </div>
         </div>
-          
-          `;
-    }
-  });
+        <li>
+          <button class="buttonAddToCart">Add to Cart</button>
+        </li>
+      </div>`
+    )
+    .join("");
+
+  realisticProducts.innerHTML = products
+    .filter((item) => item[3] == "Realistic")
+    .map(
+      (item) => `
+      <div class="exProduct1Realistic current-item-realistic">
+        <img src="${item[4]}" />
+        <div class="contentProduct1">
+          <div class="descriptionProduct1">
+            <h3>${item[0]}</h3>
+            <p class="description">${item[2]}</p>
+            <p class="artStyle">${item[3]}</p>
+          </div>
+          <div class="productValor1">
+            <h3><span>${item[1]}</span>$</h3>
+          </div>
+        </div>
+        <li>
+          <button class="buttonAddToCart">Add to Cart</button>
+        </li>
+      </div>`
+    )
+    .join("");
+
+  cartoonProducts.innerHTML = products
+    .filter((item) => item[3] == "Cartoon")
+    .map(
+      (item) => `
+      <div class="exProduct1Cartoon">
+        <img src="${item[4]}" />
+        <div class="contentProduct1">
+          <div class="descriptionProduct1">
+            <h3>${item[0]}</h3>
+            <p class="description">${item[2]}</p>
+            <p class="artStyle">${item[3]}</p>
+          </div>
+          <div class="productValor1">
+            <h3><span>${item[1]}</span>$</h3>
+          </div>
+        </div>
+        <li>
+          <button class="buttonAddToCart">Add to Cart</button>
+        </li>
+      </div>`
+    )
+    .join("");
 
   const buttonsAddToCart = document.querySelectorAll(".buttonAddToCart");
-
   buttonsAddToCart.forEach((button) => {
     button.addEventListener("click", addProductToCart);
   });
@@ -224,117 +177,43 @@ function addProductToCart(event) {
   }
 }
 
-iniciateStore();
+initiateStore();
 
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const exProduct1 = document.querySelectorAll(".exProduct1");
-const maxexProduct1 = exProduct1.length;
+function setupCarousel(controlSelector, itemSelector, itemsPerView) {
+  const controls = document.querySelectorAll(controlSelector);
+  const items = document.querySelectorAll(itemSelector);
+  const maxItems = items.length;
+  let currentItem = 0;
 
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    e.preventDefault();
-    isLeft = e.target.classList.contains("fa-arrow-left");
+  controls.forEach((control) => {
+    control.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isLeft = e.target.classList.contains("fa-arrow-left");
 
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
-    }
+      currentItem = isLeft ? currentItem - 1 : currentItem + 1;
 
-    if (currentItem >= maxexProduct1 - 7) {
-      currentItem = 0;
-    }
+      if (currentItem > maxItems - itemsPerView) {
+        currentItem = maxItems - itemsPerView;
+      }
+      if (currentItem < 0) {
+        currentItem = 0;
+      }
 
-    if (currentItem < 0) {
-      currentItem = maxexProduct1 - 6;
-    }
+      items.forEach((item) => item.classList.remove("current-item"));
 
-    exProduct1.forEach((item) => item.classList.remove("current-item"));
+      items[currentItem].scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "nearest",
+      });
 
-    exProduct1[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
+      items[currentItem].classList.add("current-item");
+      console.log(`Current item index: ${currentItem}`);
     });
-
-    exProduct1[currentItem].classList.add("current-item");
   });
-});
+}
 
-const controlFree = document.querySelectorAll(".controlFree");
-let currentItemFree = 0;
-const exProduct1Free = document.querySelectorAll(".exProduct1Free");
-const maxexProduct1Free = exProduct1Free.length;
-
-controlFree.forEach((controlFree) => {
-  controlFree.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("fa-arrow-left");
-
-    if (isLeft) {
-      currentItemFree -= 1;
-    } else {
-      currentItemFree += 1;
-    }
-
-    if (currentItemFree >= maxexProduct1Free - 7) {
-      currentItemFree = 0;
-    }
-
-    if (currentItemFree < 0) {
-      currentItemFree = maxexProduct1Free - 6;
-    }
-
-    exProduct1Free.forEach((item) =>
-      item.classList.remove("current-item-free")
-    );
-
-    exProduct1Free[currentItemFree].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
-    });
-
-    exProduct1Free[currentItemFree].classList.add("current-item-free");
-  });
-});
-
-const controlRealistic = document.querySelectorAll(".controlrealistic");
-let currentItemRealistic = 0;
-const exProduct1Realistic = document.querySelectorAll(".exProduct1Realistic");
-const maxexProduct1Realistic = exProduct1Realistic.length;
-
-controlRealistic.forEach((controlRealistic) => {
-  controlRealistic.addEventListener("click", (e) => {
-    e.preventDefault();
-    isLeft = e.target.classList.contains("fa-arrow-left");
-
-    if (isLeft) {
-      currentItemRealistic -= 1;
-    } else {
-      currentItemRealistic += 1;
-    }
-
-    if (currentItemRealistic >= maxexProduct1Realistic - 7) {
-      currentItemRealistic = 0;
-    }
-
-    if (currentItemRealistic < 0) {
-      currentItemRealistic = maxexProduct1Realistic - 6;
-    }
-
-    exProduct1Realistic.forEach((item) =>
-      item.classList.remove("current-item-realistic")
-    );
-
-    exProduct1Realistic[currentItemRealistic].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
-    });
-
-    exProduct1Realistic[currentItemRealistic].classList.add(
-      "current-item-realistic"
-    );
-  });
-});
+setupCarousel(".control", ".exProduct1", 14);
+setupCarousel(".controlFree", ".exProduct1Free", 9);
+setupCarousel(".controlrealistic", ".exProduct1Realistic", 6);
+setupCarousel(".controlCartoon", ".exProduct1Cartoon", 9);

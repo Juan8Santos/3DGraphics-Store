@@ -137,12 +137,12 @@ controls.forEach((control) => {
       currentItem += 1;
     }
 
-    if (currentItem >= maxexProduct1 - 5) {
-      currentItem = 0;
+    if (currentItem > maxexProduct1 - 6) {
+      currentItem = maxexProduct1 - 6;
     }
 
     if (currentItem < 0) {
-      currentItem = maxexProduct1 - 5;
+      currentItem = 0;
     }
 
     exProduct1.forEach((item) => item.classList.remove("current-item"));
@@ -154,5 +154,6 @@ controls.forEach((control) => {
     });
 
     exProduct1[currentItem].classList.add("current-item");
+    console.log(currentItem);
   });
 });

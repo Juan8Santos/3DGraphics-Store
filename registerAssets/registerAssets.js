@@ -98,12 +98,12 @@ inputProductName.addEventListener("keyup", () => {
     labelProductName.setAttribute("style", "color: red");
     labelProductName.innerHTML =
       "<strong>Product Name</strong> *put 3 characters!";
-    inputProductName.setAttribute("style", "outline: 1px solid red");
+    inputProductName.setAttribute("style", "border: 1px solid red");
     validProductName = false;
   } else {
     labelProductName.setAttribute("style", "color: black");
     labelProductName.innerHTML = "<strong>Product Name</strong>";
-    inputProductName.setAttribute("style", "outline: 0");
+    inputProductName.setAttribute("style", "border: 1px solid black");
     validProductName = true;
   }
 });
@@ -113,12 +113,12 @@ inputValue.addEventListener("keyup", () => {
     labelValue.setAttribute("style", "color: red");
     labelValue.innerHTML =
       "<strong>Value</strong> *The value cannot be negative!";
-    inputValue.setAttribute("style", "outline: 1px solid red");
+    inputValue.setAttribute("style", "border: 1px solid red");
     validValue = false;
   } else {
     labelValue.setAttribute("style", "color: black");
     labelValue.innerHTML = "<strong>Value</strong>";
-    inputValue.setAttribute("style", "outline: 0");
+    inputValue.setAttribute("style", "border: 1px solid black");
     validValue = true;
   }
 });
@@ -128,18 +128,18 @@ inputDescription.addEventListener("keyup", () => {
     labelDescription.setAttribute("style", "color: red");
     labelDescription.innerHTML =
       "<strong>Description</strong> *Description too long!";
-    inputDescription.setAttribute("style", "outline: 1px solid red");
+    inputDescription.setAttribute("style", "border: 1px solid red");
     validDescription = false;
   } else if (inputDescription.value == "") {
     labelDescription.setAttribute("style", "color: red");
     labelDescription.innerHTML =
       "<strong>Description</strong> *Fill in this field!";
-    inputDescription.setAttribute("style", "outline: 1px solid red");
+    inputDescription.setAttribute("style", "border: 1px solid red");
     validDescription = false;
   } else {
     labelDescription.setAttribute("style", "color: black");
     labelDescription.innerHTML = "<strong>Description</strong>";
-    inputDescription.setAttribute("style", "outline: 0");
+    inputDescription.setAttribute("style", "1px solid black");
     validDescription = true;
   }
 });
@@ -150,26 +150,25 @@ function registerAssets() {
   if (!validProductName || !validValue || !validDescription) {
     errorMsg.innerHTML = "*Some of the fields are not filled in correctly!";
     errorMsg.setAttribute("style", "color: red");
-    labelPicture.setAttribute("style", "border: red dashed 0px");
 
     if (inputProductName.value == "") {
       labelProductName.setAttribute("style", "color: red");
       labelProductName.innerHTML =
         "<strong>Product Name</strong> *fill in this field!";
-      inputProductName.setAttribute("style", "outline: 1px solid red");
+      inputProductName.setAttribute("style", "border: 1px solid red");
     }
 
     if (inputValue.value == "") {
       labelValue.setAttribute("style", "color: red");
       labelValue.innerHTML = "<strong>Value</strong> *fill in this field!";
-      inputValue.setAttribute("style", "outline: 1px solid red");
+      inputValue.setAttribute("style", "border: 1px solid red");
     }
 
     if (inputDescription.value == "") {
       labelDescription.setAttribute("style", "color: red");
       labelDescription.innerHTML =
         "<strong>Description</strong> *Fill in this field!";
-      inputDescription.setAttribute("style", "outline: 1px solid red");
+      inputDescription.setAttribute("style", "border: 1px solid red");
     }
   } else if (validProductName && validValue && validDescription && img) {
     errorMsg.innerHTML = "";
