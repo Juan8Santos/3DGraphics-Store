@@ -13,21 +13,23 @@ html {
 #logo {
   position: absolute;
   left: 46px;
-  top: 2px;
+  bottom: 897px;
   height: 45px;
   width: 120px;
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("cozinha3D.png");
+  background: url("freepik__upload__81959.jpeg");
   width: 100%;
-  height: 480px;
-  position: absolute;
+  background-size: cover;
+  background-repeat: round;
+  height: 100vh;
+  box-shadow: 0px 10px 24px 4px rgba(201, 201, 201, 1);
+  overflow-x: hidden;
 }
 
 nav {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 nav ul {
@@ -40,27 +42,28 @@ nav ul {
 }
 
 .nav-item {
-  margin-top: 13px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
 .nav-item-register {
-  margin-top: 13px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
 .nav-item-login {
-  margin-top: 13px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
 .nav-item-cart {
-  margin-top: 13px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
 #registerAssets input {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
   border: 0px white solid;
   font-size: 14px;
   transition: 0.3s;
@@ -72,7 +75,7 @@ nav ul {
 }
 
 .nav-item-manege {
-  margin-top: 13px;
+  margin-top: 25px;
   display: none;
   cursor: pointer;
 }
@@ -81,9 +84,21 @@ nav ul {
   align-items: center;
 }
 
+.cart {
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-link {
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 14px;
   transition: 0.3s;
 }
@@ -95,30 +110,32 @@ nav ul li a:hover {
 .login {
   margin-left: 15px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 14px;
-  border: 1px solid rgb(0, 0, 0);
-  padding: 7px;
-  padding-left: 26px;
-  padding-right: 26px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 29px;
+  padding-right: 29px;
   transition: 0.3s;
 }
 
 .navbar .nav-item-login .login:hover {
-  color: white;
-  background-color: black;
+  color: rgb(58, 58, 58);
+  background-color: rgb(255, 255, 255);
 }
 
 .Register {
   margin-left: -10px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: rgb(58, 58, 58);
+  background-color: rgb(255, 255, 255);
   font-size: 14px;
-  border: 1px solid rgb(0, 0, 0);
-  padding: 7px;
-  padding-left: 20px;
-  padding-right: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 8px;
+  padding-left: 23px;
+  padding-right: 23px;
   transition: 0.3s;
 }
 
@@ -129,22 +146,24 @@ nav ul li a:hover {
 }
 
 .nav-item-account {
-  margin-top: 13px;
+  margin-top: 25px;
 }
 
 .account {
   font-size: 14px;
   margin-top: 2px;
-  border-left: 1px black solid;
+  border-left: 1px rgb(255, 255, 255) solid;
+  color: white;
   padding-left: 20px;
 }
 
 #logoutButton {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: rgb(29, 29, 29);
+  background-color: rgb(255, 255, 255);
   font-size: 14px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
   margin-top: -6px;
   padding: 7px;
   padding-left: 20px;
@@ -153,21 +172,22 @@ nav ul li a:hover {
 }
 
 #logoutButton:hover {
-  color: black;
-  background-color: white;
-  border: 1px black solid;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px rgb(255, 255, 255) solid;
 }
 
 header .contentHeader {
   opacity: 0;
-  transform: translateX(-100px);
-  animation: slideIn 1s ease-out forwards;
+  transform: translateX(300px);
+  animation: slideIn 2s ease-out forwards;
+  width: 735px;
 }
 
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(300px);
   }
   100% {
     opacity: 1;
@@ -176,61 +196,73 @@ header .contentHeader {
 }
 
 header h5 {
-  margin-top: 108px;
-  margin-left: 60px;
   color: white;
 }
 
 header h1 {
+  font-family: "Unbounded", sans-serif;
   margin-top: 30px;
-  margin-left: 60px;
   color: white;
-  font-size: 40px;
+  font-size: 64px;
 }
 
-header p {
+header .pHeader {
   color: white;
   margin-top: 30px;
-  margin-left: 60px;
-  margin-right: 50%;
+  margin-right: 86px;
+  margin-bottom: 72px;
 }
 
-header ul {
+.flexHeaderContent {
+  display: flex;
+  justify-content: end;
+  margin-top: 185px;
+  margin-right: 135px;
+}
+
+header .ulNav {
   list-style-type: none;
   display: flex;
-  justify-content: left;
+  justify-content: end;
   height: 50px;
-  margin-left: 60px;
-  margin-top: 30px;
+  gap: 20px;
+}
+
+.ulHeader {
+  list-style-type: none;
+  display: flex;
+  height: 50px;
   gap: 20px;
 }
 
 .productsHeader {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 14px;
-  border: 1px solid rgb(255, 255, 255);
-  padding: 7px;
-  padding-left: 23px;
-  padding-right: 23px;
+  font-size: 24px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   transition: 0.3s;
 }
 
 header .contentHeader ul .productsHeader:hover {
   background-color: white;
-  color: rgba(0, 0, 0, 0.534);
+  color: rgb(58, 58, 58);
 }
 
 .nav-item .footerHeader {
-  margin-left: -10px;
+  margin-left: 6px;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.534);
+  color: rgb(58, 58, 58);
   background-color: rgb(255, 255, 255);
-  font-size: 14px;
-  border: 1px solid rgb(255, 255, 255);
-  padding: 7px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 24px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   transition: 0.3s;
 }
 
@@ -240,7 +272,7 @@ header .contentHeader ul .footerHeader:hover {
 }
 
 #sectionProducts {
-  margin-top: 530px;
+  margin-top: 70px;
   margin-left: 60px;
 }
 .contentProducts {
@@ -267,6 +299,7 @@ header .contentHeader ul .footerHeader:hover {
   padding: 7px;
   padding-left: 20px;
   padding-right: 20px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -284,7 +317,7 @@ header .contentHeader ul .footerHeader:hover {
   width: 30px;
   height: 30px;
   right: 110px;
-  bottom: -310px;
+  bottom: -745px;
   transition: 0.3s;
 }
 
@@ -307,7 +340,7 @@ header .contentHeader ul .footerHeader:hover {
   width: 30px;
   height: 30px;
   right: 60px;
-  bottom: -310px;
+  bottom: -745px;
   transition: 0.3s;
 }
 
@@ -348,12 +381,12 @@ header .contentHeader ul .footerHeader:hover {
 .exProduct1 .contentProduct1 {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 3px;
 }
 
 .exProduct1 li {
   list-style-type: none;
-  margin-top: 23px;
+  margin-top: 11px;
   text-align: center;
 }
 
@@ -364,6 +397,7 @@ header .contentHeader ul .footerHeader:hover {
   border: black solid 1px;
   padding-top: 8px;
   padding-bottom: 8px;
+  border-radius: 5px;
   padding-left: 36%;
   padding-right: 35%;
   transition: 0.3s;

@@ -53,15 +53,19 @@ function Buy() {
 
 function updateCart() {
   tBody.innerHTML = "";
-  let totalPurchase = 0;
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let totalPurchase = cart.reduce((acc, crr) => {
+    let amount = crr.amount || 1;
+    let ProductValueCart = Number(crr.ProductValueCart);
+    return acc + ProductValueCart * amount;
+  }, 0);
 
   cart.forEach((item, i) => {
     let amount = item.amount || 1;
     let ProductValueCart = Number(item.ProductValueCart);
     let FinalValue = ProductValueCart * amount;
-    totalPurchase += FinalValue;
 
     cartTotalValue.innerHTML = "$" + totalPurchase.toFixed(2);
     cartTotalPurchase.innerHTML = "$" + totalPurchase.toFixed(2);
