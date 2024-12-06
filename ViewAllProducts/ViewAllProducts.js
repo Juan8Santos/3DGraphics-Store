@@ -218,4 +218,4 @@ setupCarousel(".controlFree", ".exProduct1Free", 9);
 setupCarousel(".controlrealistic", ".exProduct1Realistic", 6);
 setupCarousel(".controlCartoon", ".exProduct1Cartoon", 9);
 
-console.log();
+console.log("teste");
