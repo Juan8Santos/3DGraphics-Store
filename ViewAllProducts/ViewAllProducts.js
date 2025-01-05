@@ -217,5 +217,3 @@ setupCarousel(".control", ".exProduct1", 14);
 setupCarousel(".controlFree", ".exProduct1Free", 9);
 setupCarousel(".controlrealistic", ".exProduct1Realistic", 6);
 setupCarousel(".controlCartoon", ".exProduct1Cartoon", 9);
-
-console.log("teste");
